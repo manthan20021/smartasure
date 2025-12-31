@@ -12,7 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
 export default function About() {
   const titleRef = useRef<HTMLHeadingElement>(null);
   const textRef = useRef<HTMLHeadingElement>(null);
-  const imgRef = useRef<HTMLHeadingElement>(null);
+  const imgRef = useRef<HTMLImageElement>(null);
   const textRef2 = useRef<HTMLHeadingElement>(null);
   const imgRef2 = useRef<HTMLImageElement>(null);
   const imgRef3 = useRef<HTMLImageElement>(null);
