@@ -10,13 +10,13 @@ import Image from "next/image";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function About() {
-  const titleRef = useRef<HTMLHeadingElement | null>(null);
-  const textRef = useRef<HTMLHeadingElement | null>(null);
-  const imgRef = useRef<HTMLHeadingElement | null>(null);
-  const textRef2 = useRef<HTMLHeadingElement | null>(null);
-  const imgRef2 = useRef<HTMLImageElement | null>(null);
-  const imgRef3 = useRef<HTMLImageElement | null>(null);
-  const textRef3 = useRef<HTMLHeadingElement | null>(null);
+  const titleRef = useRef<HTMLHeadingElement>(null);
+  const textRef = useRef<HTMLHeadingElement>(null);
+  const imgRef = useRef<HTMLHeadingElement>(null);
+  const textRef2 = useRef<HTMLHeadingElement>(null);
+  const imgRef2 = useRef<HTMLImageElement>(null);
+  const imgRef3 = useRef<HTMLImageElement>(null);
+  const textRef3 = useRef<HTMLHeadingElement>(null);
 
 
  // const textref2 = useRef<HTMLHeadingElement | null>(null);
