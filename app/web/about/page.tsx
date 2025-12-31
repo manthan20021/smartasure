@@ -9,7 +9,7 @@ import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function About() : Element {
+export default function About() {
   const titleRef = useRef<HTMLHeadingElement | null>(null);
   const textRef = useRef<HTMLHeadingElement | null>(null);
   const imgRef = useRef<HTMLHeadingElement | null>(null);
