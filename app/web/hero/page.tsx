@@ -13,7 +13,7 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Hero(){
 
   const [mousePos, setMousePos] = useState({x:0,  y: 0});
-  const cardsRef = useRef([]);
+  const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
   const div1Ref = useRef<HTMLDivElement | null>(null);
   
 
@@ -67,51 +67,49 @@ export default function Hero(){
 
   
 
-  const getCardStyle = (index) => {
-    if (!cardsRef.current[index]) return {};
-    
-    const card = cardsRef.current[index];
-    const rect = card.getBoundingClientRect();
-    const cardCenterX = rect.left + rect.width / 2;
-    const cardCenterY = rect.top + rect.height / 2;
-    
-    const deltaX = mousePos.x - cardCenterX;
-    const deltaY = mousePos.y - cardCenterY;
-    
-    // Calculate angle from card center to mouse
-    const angle = Math.atan2(deltaY, deltaX);
-    
-    // Tilt intensity based on angle
-    const tiltAmount = 25;
-    
-    const rotateY = Math.cos(angle) * tiltAmount;
-    const rotateX = Math.sin(angle) * tiltAmount;
+  const getCardStyle = (index: number) => {
+  const card = cardsRef.current[index];
+  if (!card) return {};
 
-    return {
-      transform: `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
-      transition: 'transform 0.2s ease-out'
-    };
-  };
+  const rect = card.getBoundingClientRect();
+  const cardCenterX = rect.left + rect.width / 2;
+  const cardCenterY = rect.top + rect.height / 2;
 
-  const getLightStyle = (index) => {
-    if (!cardsRef.current[index]) return {};
-    
-    const card = cardsRef.current[index];
-    const rect = card.getBoundingClientRect();
-    const cardCenterX = rect.left + rect.width / 2;
-    const cardCenterY = rect.top + rect.height / 2;
-    
-    const deltaX = mousePos.x - cardCenterX;
-    const deltaY = mousePos.y - cardCenterY;
-    
-    // Calculate light position
-    const lightX = ((deltaX / rect.width) * 50 + 50);
-    const lightY = ((deltaY / rect.height) * 50 + 50);
-    
-    return {
-      background: `radial-gradient(circle at ${lightX}% ${lightY}%, rgba(255, 255, 255, 0.3), transparent 60%)`
-    };
+  const deltaX = mousePos.x - cardCenterX;
+  const deltaY = mousePos.y - cardCenterY;
+
+  const angle = Math.atan2(deltaY, deltaX);
+  const tiltAmount = 25;
+
+  const rotateY = Math.cos(angle) * tiltAmount;
+  const rotateX = Math.sin(angle) * tiltAmount;
+
+  return {
+    transform: `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
+    transition: "transform 0.2s ease-out",
   };
+};
+
+
+  const getLightStyle = (index: number) => {
+  const card = cardsRef.current[index];
+  if (!card) return {};
+
+  const rect = card.getBoundingClientRect();
+  const cardCenterX = rect.left + rect.width / 2;
+  const cardCenterY = rect.top + rect.height / 2;
+
+  const deltaX = mousePos.x - cardCenterX;
+  const deltaY = mousePos.y - cardCenterY;
+
+  const lightX = (deltaX / rect.width) * 50 + 50;
+  const lightY = (deltaY / rect.height) * 50 + 50;
+
+  return {
+    background: `radial-gradient(circle at ${lightX}% ${lightY}%, rgba(255,255,255,0.3), transparent 60%)`,
+  };
+};
+
 
   const cards = [
     { color: 'bg-gradient-to-br from-blue-700 to-[#3F3F3F]', txt:'REPPMIUM GRADE AUTOMAION ON SYSTEMS'},
