@@ -13,7 +13,7 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Hero(){
 
   const [mousePos, setMousePos] = useState({x:0,  y: 0});
-  const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
+  const cardsRef = useRef<(HTMLDivElement | null)[]>([]); 
   const div1Ref = useRef<HTMLDivElement | null>(null);
   
 
@@ -81,34 +81,12 @@ export default function Hero(){
   const angle = Math.atan2(deltaY, deltaX);
   const tiltAmount = 25;
 
-  const rotateY = Math.cos(angle) * tiltAmount;
-  const rotateX = Math.sin(angle) * tiltAmount;
-
   return {
-    transform: `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
+    transform: `perspective(1000px) rotateX(${Math.sin(angle) * tiltAmount}deg) rotateY(${Math.cos(angle) * tiltAmount}deg)`,
     transition: "transform 0.2s ease-out",
   };
 };
 
-
-  const getLightStyle = (index: number) => {
-  const card = cardsRef.current[index];
-  if (!card) return {};
-
-  const rect = card.getBoundingClientRect();
-  const cardCenterX = rect.left + rect.width / 2;
-  const cardCenterY = rect.top + rect.height / 2;
-
-  const deltaX = mousePos.x - cardCenterX;
-  const deltaY = mousePos.y - cardCenterY;
-
-  const lightX = (deltaX / rect.width) * 50 + 50;
-  const lightY = (deltaY / rect.height) * 50 + 50;
-
-  return {
-    background: `radial-gradient(circle at ${lightX}% ${lightY}%, rgba(255,255,255,0.3), transparent 60%)`,
-  };
-};
 
 
   const cards = [
@@ -152,7 +130,9 @@ export default function Hero(){
         {cards.map((card, index) => (
           <div
             key={index}
-            ref={(el) => (cardsRef.current[index] = el)}
+            ref={(el) => {
+              cardsRef.current[index] = el
+            }}
             style={getCardStyle(index)}
             className={`${card.color} rounded-2xl px-12 relative h-[202px] w-[422px] shadow-2xl flex items-center justify-center text-white text-3xl font-bold cursor-pointer transform-gpu overflow-hidden`}
           >
