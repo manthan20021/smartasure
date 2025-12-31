@@ -58,6 +58,8 @@ export default function Hero2(){
 
 //     },[])
 
+
+
 useEffect(() => {
   const el = videoRef.current;
 
@@ -119,7 +121,7 @@ useEffect(() => {
             </div>
             
             <video
-      src="/hero.mp4"
+      src="https://res.cloudinary.com/duisqp8c9/video/upload/v1767191496/Firefly_Create_a_high-end_cinematic_advertisement_video_for_a_premium_Smart_Home_Automation_ecosyste_weeyxl.mp4"
       autoPlay
       loop
       muted

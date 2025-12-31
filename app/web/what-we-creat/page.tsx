@@ -68,11 +68,12 @@ export default function HorizontalTest() {
         {/* panal2 */}
         <div className="panel w-screen h-screen bg-[#D5D5D5] flex items-center justify-center">
            <video
-              src="/light.mp4"
+              src="https://res.cloudinary.com/duisqp8c9/video/upload/v1767192087/light-home_mfooxb.mp4"
               autoPlay
               loop
               muted
               playsInline
+              preload="none"
               className="rounded-l-full w-full h-full object-cover"
             />
         </div> 
@@ -80,11 +81,12 @@ export default function HorizontalTest() {
         {/* panal3 */}
         <div className="panel w-screen h-screen bg-[#D5D5D5] flex items-center justify-center">
            <video
-              src="/switchs.mp4"
+              src="https://res.cloudinary.com/duisqp8c9/video/upload/v1767192345/switchs_k9hfmh.mp4"
               autoPlay
               loop
               muted
               playsInline
+              preload="none"
               className=" w-full h-full object-cover"
             />
         </div>
@@ -92,11 +94,12 @@ export default function HorizontalTest() {
          {/* panal3 */}
         <div className="panel w-screen h-screen bg-[#D5D5D5] flex items-center justify-center">
            <video
-              src="/hometheatre.mp4"
+              src="https://res.cloudinary.com/duisqp8c9/video/upload/v1767192666/curten_tflior.mp4"
               autoPlay
               loop
               muted
               playsInline
+              preload="none"
               className=" w-full h-full object-cover"
             />
         </div>       

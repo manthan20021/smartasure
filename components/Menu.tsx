@@ -59,7 +59,6 @@ export default function FullscreenMenu() {
     { label: "Home", href: "/" },
     { label: "About", href: "/web/about" },
     { label: "Brand", href: "/web/brand-philosophy" },
-    { label: "What-we-creat", href: "/web/what-we-creat" },
     { label: "How-it-works", href: "/web/how-it-works" },
   ];
 
