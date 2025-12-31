@@ -124,6 +124,7 @@ useEffect(() => {
       loop
       muted
       playsInline
+      preload="none"
       ref={videoRef}
       className="w-full  h-full object-cover will-change-transform"
       
