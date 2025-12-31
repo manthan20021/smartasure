@@ -18,7 +18,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function BrandPhilosophy() {
 
-const sectionRef = useRef<HTMLHeadingElement | null>(null);
+const sectionRef = useRef<HTMLDivElement | null>(null);
 
   
 

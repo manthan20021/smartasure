@@ -9,20 +9,14 @@ import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function HowItWorks(): JSX.Element {
+export default function HowItWorks(){
   const titleRef = useRef<HTMLHeadingElement | null>(null);
 
-  const Ref1 = useRef<HTMLHeadingElement | null>(null);
-  const Ref2 = useRef<HTMLHeadingElement | null>(null);
-  const Ref3 = useRef<HTMLHeadingElement | null>(null);
-  const Ref4 = useRef<HTMLHeadingElement | null>(null);
-  const Ref5 = useRef<HTMLHeadingElement | null>(null);
-  const textRef2 = useRef<HTMLHeadingElement | null>(null);
-  const imgRef2 = useRef<HTMLHeadingElement | null>(null);
-  const imgRef3 = useRef<HTMLHeadingElement | null>(null);
-  const textRef3 = useRef<HTMLHeadingElement | null>(null);
- const cardRef = useRef<HTMLDivElement>(null);
-  const textRef = useRef<HTMLHeadingElement>(null);
+  const Ref1 = useRef<HTMLDivElement>(null);
+  const Ref2 = useRef<HTMLDivElement>(null);
+  const Ref3 = useRef<HTMLDivElement>(null);
+  const Ref4 = useRef<HTMLDivElement>(null);
+  const Ref5 = useRef<HTMLDivElement>(null);
 
   
 

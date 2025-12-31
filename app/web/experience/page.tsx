@@ -14,6 +14,7 @@ const SmartHomeExperience: React.FC = () => {
   const [isLocked, setIsLocked] = useState(false);
   const [brightness, setBrightness] = useState(80);
   const [musicVolume, setMusicVolume] = useState(50);
+
   const phoneRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement | null>(null);
   const textRef = useRef<HTMLHeadingElement | null>(null);

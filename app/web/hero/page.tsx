@@ -1,28 +1,20 @@
 "use client"
-import {motion} from "framer-motion"
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "lenis";
 
-import { Montserrat } from "next/font/google";
-import Image from "next/image";
+
 
 
 import { useState, useEffect, useRef } from 'react';
 gsap.registerPlugin(ScrollTrigger);
 
 
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["700", "800", "900"],
-});
-
 export default function Hero(){
 
   const [mousePos, setMousePos] = useState({x:0,  y: 0});
   const cardsRef = useRef([]);
-  const div1Ref = useRef<HTMLHeadingElement | null>(null);
+  const div1Ref = useRef<HTMLDivElement | null>(null);
   
 
 

@@ -46,7 +46,7 @@ export default function HorizontalTest() {
   return (
     <div>
 
-      <section
+      <div
       ref={sectionRef}
       className="h-screen w-screen bg-[#D5D5D5]  overflow-hidden "
     >
@@ -101,7 +101,7 @@ export default function HorizontalTest() {
             />
         </div>       
       </div>
-    </section>
+    </div>
 
     
     </div>

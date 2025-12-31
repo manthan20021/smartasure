@@ -1,16 +1,14 @@
 "use client"
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Lenis from "lenis";
 import Link from "next/link";
-import { relative } from "path";
 import { useEffect, useRef } from "react"
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Hero2(){
 
-    const videoRef = useRef<HTMLHeadingElement | null>(null);
+    const videoRef = useRef<HTMLVideoElement>(null);
 
 //     useEffect(()=> {
 

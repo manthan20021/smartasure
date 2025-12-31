@@ -14,8 +14,8 @@ export default function About() {
   const textRef = useRef<HTMLHeadingElement | null>(null);
   const imgRef = useRef<HTMLHeadingElement | null>(null);
   const textRef2 = useRef<HTMLHeadingElement | null>(null);
-  const imgRef2 = useRef<HTMLHeadingElement | null>(null);
-  const imgRef3 = useRef<HTMLHeadingElement | null>(null);
+  const imgRef2 = useRef<HTMLImageElement | null>(null);
+  const imgRef3 = useRef<HTMLImageElement | null>(null);
   const textRef3 = useRef<HTMLHeadingElement | null>(null);
 
 
@@ -230,7 +230,7 @@ export default function About() {
           {/* section1 */}
             <div className="h-auto w-full flex items-center justify-between relative  ">
                 {/* text section */}
-                <div ref={textRef} className="w-[567px] h-auto pr-8">
+                <h5 ref={textRef} className="w-[567px] h-auto pr-8">
                     <h1 className="text-[80px] font-medium">SMARTASURE</h1>
                     <p className="text-[25px] text-[#999999]">SmartaSure is a premium smart home automa on brand by 
                       Agryen Technologies LLP.
@@ -240,7 +240,7 @@ export default function About() {
                       Every experience is deliberate. 
                       Every detail ma ers.
                       </p>
-                </div>
+                </h5>
                 {/* img section */}
                 <div>
                     <Image
@@ -270,19 +270,19 @@ export default function About() {
                 </div> 
 
                 {/* textSection */}
-              <div ref={textRef2} className="w-[567px] pl-12 h-auto">
+              <h5 ref={textRef2} className="w-[567px] pl-12 h-auto">
                     <h1 className="text-[80px] font-medium">VISION</h1>
                     <p className="text-[25px] text-[#999999]">
                       Redefining modern living through intelligent, elegant technology. 
                       </p>
-                </div>
+                </h5>
                 
             </div>
 
             {/* section3 */}
             <div className="h-auto w-full flex items-center justify-between relative top-[-100] ">
                 {/* text section */}
-                <div ref={textRef3}  className="w-[567px] h-auto">
+              <h5 ref={textRef3}  className="w-[567px] h-auto">
                     <h1 className="text-[80px] font-medium">MISSION</h1>
                     <p className="text-[25px] text-[#999999]">
                        To deliver world-class automa on experiences 
@@ -293,7 +293,7 @@ export default function About() {
  <br/>
  To build homes that remain relevant for decades 
                     </p>
-                </div>
+                </h5>
                 {/* img section */}
                 <div>
                     <Image 
