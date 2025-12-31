@@ -20,20 +20,12 @@ export default function Hero(){
 
 
   useEffect(() => {
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e : MouseEvent) => {
       setMousePos({ x: e.clientX, y: e.clientY });
     };
 
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
-
- 
-   
-
-  
-
-    
-
   }, []);
 
 
