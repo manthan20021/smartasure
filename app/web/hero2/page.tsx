@@ -10,55 +10,9 @@ export default function Hero2(){
 
     const videoRef = useRef<HTMLVideoElement>(null);
 
-//     useEffect(()=> {
-
-//           //configretion
-//             const lenis = new Lenis({
-//               duration: 1.2,
-//               easing: (t: number) =>
-//                 Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-//             });
-        
-//             const raf = (time: number): void => {
-//               lenis.raf(time);
-//               requestAnimationFrame(raf);
-//             };
-//             requestAnimationFrame(raf);
-        
-//             lenis.on("scroll", ScrollTrigger.update);
-
-//             if (videoRef.current) {
-//   gsap.fromTo(
-//     videoRef.current,
-//     {
-//       scale: 1,
-//       borderRadius: "0px",
-//     },
-//     {
-//       scale: 1.6,              // 🔍 zoom in
-//       borderRadius: "40px",    // ⭕ rounded increase
-//       ease: "power2.out",      // ✨ smooth feel
-//       scrollTrigger: {
-//         trigger: videoRef.current,
-//         start: "top 85%",
-//         end: "+=700",
-//         scrub: 1,              // smooth scrolling
-//       },
-//     }
-//   );
-// }
-
-
-
-    
-//     return (): void => {
-//       lenis.destroy();
-//       ScrollTrigger.killAll();
-//     };
-
-//     },[])
-
-
+    const message = encodeURIComponent(
+  "Hi 👋 I want to know more about your smart switches."
+);
 
 useEffect(() => {
   const el = videoRef.current;
@@ -115,9 +69,16 @@ useEffect(() => {
                         EXPERIENCE SMARTASURE
                         </button>
               </Link>
-    <button className=" border-[.1px] from-[#0A0A0A]-700 border-[#3F3F3F] text-[15px] text-[#B4C9C9] px-5 py-5 rounded-full">
+
+              <a
+              href={`https://wa.me/7588876025?text=${message}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              >
+                <button className=" border-[.1px] from-[#0A0A0A]-700 border-[#3F3F3F] text-[15px] text-[#B4C9C9] px-5 py-5 rounded-full">
                         BOOK A PRIVATE DEMO
                         </button>
+                        </a>
             </div>
             
             <video

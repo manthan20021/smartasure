@@ -16,7 +16,9 @@ export default function Hero(){
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]); 
   const div1Ref = useRef<HTMLDivElement | null>(null);
   
-
+ const message = encodeURIComponent(
+  "Hi 👋 I want to know more about your smart switches."
+);
 
 
   useEffect(() => {
@@ -120,8 +122,13 @@ export default function Hero(){
 </p>
 
 
+ <a
+              href={`https://wa.me/7588876025?text=${message}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              >
 <button className="px-10 h-[68px] rounded-l-full bg-white text-[#5f5f5f] text-2xl mt-5 font-semibold">Book a Private Demo </button>
-
+</a>
             </div>
 
             {/* 3d models */}

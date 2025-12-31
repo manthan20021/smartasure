@@ -20,7 +20,9 @@ export default function BrandPhilosophy() {
 
 const sectionRef = useRef<HTMLDivElement | null>(null);
 
-  
+   const message = encodeURIComponent(
+  "Hi 👋 I want to know more about your smart switches."
+);
 
   useEffect((): (() => void) => {
     //configretion
@@ -114,9 +116,15 @@ const sectionRef = useRef<HTMLDivElement | null>(null);
           <span className="font-semibold">This is intelligent living, curated.</span>
         </p>
 
+        <a
+              href={`https://wa.me/7588876025?text=${message}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              >
          <button className=" border-[.1px] from-[#0A0A0A]-700 border-[#3F3F3F] text-[15px] text-[#B4C9C9] bg-black mt-5 px-5 py-5 rounded-full">
                         BOOK A PRIVATE DEMO
                         </button>
+                        </a>
       </div>
 
       {/* Rotating Circular Text */}

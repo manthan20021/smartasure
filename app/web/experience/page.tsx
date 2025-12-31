@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const SmartHomeExperience: React.FC = () => {
   const [activeControl, setActiveControl] = useState<string>('lights');
-  const [lightColor, setLightColor] = useState({r:106, g:25, b:155});
+  const [lightColor, setLightColor] = useState({r:10, g:10, b:10});
   const [temperature, setTemperature] = useState(22);
   const [isLocked, setIsLocked] = useState(false);
   const [brightness, setBrightness] = useState(80);
