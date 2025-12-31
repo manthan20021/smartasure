@@ -114,7 +114,9 @@ const sectionRef = useRef<HTMLHeadingElement | null>(null);
           <span className="font-semibold">This is intelligent living, curated.</span>
         </p>
 
-        <button className="px-7 h-[68px] bg-[#0F0F0F] text-white mt-5 font-semibold mr-5">Experience SmartaSure </button>
+         <button className=" border-[.1px] from-[#0A0A0A]-700 border-[#3F3F3F] text-[15px] text-[#B4C9C9] bg-black mt-5 px-5 py-5 rounded-full">
+                        BOOK A PRIVATE DEMO
+                        </button>
       </div>
 
       {/* Rotating Circular Text */}

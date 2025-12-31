@@ -10,7 +10,6 @@ import Hero2 from "./web/hero2/page";
 import Hero from "./web/hero/page";
 import HowItWorks from "./web/how-it-works/page";
 import Footer from "./web/footer/page";
-import NaveBar from "@/components/navbar/Nave";
 import TrionnCursor from "@/components/curcer/Curcer";
 import { useEffect, useState } from "react";
 import Loader from "@/components/Loder";
@@ -37,7 +36,6 @@ export default function Home() {
        <ReactLenis root className="h-full w-full bg-[#0F0F0F]">
          {!loaded && <Loader onComplete={() => setLoaded(true)} />}
 <TrionnCursor/>
-<NaveBar/>
  <Hero2/>
     <About/>
     <BrandPhilosophy/>

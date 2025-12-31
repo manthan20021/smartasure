@@ -1,3 +1,4 @@
+"use client"
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import {Lightbulb, Thermometer, Lock, Music, Wifi, Sun, Moon} from 'lucide-react';

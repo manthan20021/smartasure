@@ -48,20 +48,21 @@ export default function HorizontalTest() {
 
       <section
       ref={sectionRef}
-      className="h-screen bg-[#D5D5D5]  overflow-hidden "
+      className="h-screen w-screen bg-[#D5D5D5]  overflow-hidden "
     >
       <div ref={trackRef} className="flex h-screen w-screen">
 
         {/* panal1 */}
         <div className="panel w-screen h-screen bg-[#D5D5D5] flex items-center justify-center">
-          <div>
-              <h5 className="text-[180px] mt-[100px]  font-medium">
-                An ecosystem
+          <div className="flex flex-col items-center justify-center">
+              <h5 className="text-[160px] text-[#FFFFFF] font-medium">
+                AN ECOSYSTEM
               </h5>
-              <h5 className="text-[180px]  font-medium">
-                of intelligence.
+              <h5 className="text-[160px] mt-[-90px] font-medium">
+                OF INTELLIGENCE
               </h5>
             </div>
+            
         </div>
 
         {/* panal2 */}
