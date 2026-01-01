@@ -1,15 +1,13 @@
-
 "use client";
 
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "@studio-freight/lenis";
-import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function HowItWorks(){
+export default function HowItWorks() {
   const titleRef = useRef<HTMLHeadingElement | null>(null);
 
   const Ref1 = useRef<HTMLDivElement>(null);
@@ -18,13 +16,8 @@ export default function HowItWorks(){
   const Ref4 = useRef<HTMLDivElement>(null);
   const Ref5 = useRef<HTMLDivElement>(null);
 
-  
-
-  
-
-
-  useEffect((): (() => void) => {
-    //configretion
+  useEffect(() => {
+    // LENIS
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t: number) =>
@@ -39,7 +32,7 @@ export default function HowItWorks(){
 
     lenis.on("scroll", ScrollTrigger.update);
 
-    //title
+    // TITLE
     if (titleRef.current) {
       gsap.fromTo(
         titleRef.current,
@@ -47,186 +40,91 @@ export default function HowItWorks(){
         {
           opacity: 1,
           x: 0,
-          duration: 1,
           scrollTrigger: {
             trigger: titleRef.current,
             start: "top bottom",
-              end: "+=600",
-             scrub: true,
+            end: "+=600",
+            scrub: true,
           },
         }
       );
     }
 
-    //ref1
-     if (Ref1.current) {
+    const cards = [Ref1, Ref2, Ref3, Ref4, Ref5];
+
+    cards.forEach((ref, index) => {
+      if (!ref.current) return;
+
       gsap.fromTo(
-        Ref1.current,
-       { 
-        x: -220,        // ⭐ LEFT side se start
-      y: 120,         // thoda vertical move (natural feel)
-        // halka tilt
-      transformOrigin: "100% 100%", // bottom-left pivot
+        ref.current,
+        {
+          x: index % 2 === 0 ? -220 : 180,
+          y: 120,
         },
         {
-       x: 0,
-      y: 0,
-      rotation: 0,
-      ease: "none",   // ⭐ 1:1 scroll speed
-      scrollTrigger: {
-        trigger: Ref1.current,
-        start: "top bottom",
-        end: "+=500",
-        scrub: true,  // ⭐ scroll = animation
-          },
-        }
-
-      );
-    }
-
-    //Ref2
-     if (Ref2.current) {
-      gsap.fromTo(
-        Ref2.current,
-        { 
-       x: 180,          // ⭐ zyada move
-      y: 180,
-        // ⭐ kam rotate
-      transformOrigin: "100% 100%",
-        },
-        {
-            x: 0,
-      y: 0,
-      
-      ease: "none",
-      scrollTrigger: {
-        trigger: Ref2.current,
-        start: "top bottom",
-        end: "+=500",
-        scrub: true,
+          x: 0,
+          y: 0,
+          ease: "none",
+          scrollTrigger: {
+            trigger: ref.current,
+            start: "top bottom",
+            end: "+=500",
+            scrub: true,
           },
         }
       );
-    }
+    });
 
-
-     //ref3
-     if (Ref3.current) {
-      gsap.fromTo(
-        Ref3.current,
-       { 
-        x: -220,        // ⭐ LEFT side se start
-      y: 120,         // thoda vertical move (natural feel)
-        // halka tilt
-      transformOrigin: "100% 100%", // bottom-left pivot
-        },
-        {
-       x: 0,
-      y: 0,
-      
-      ease: "none",   // ⭐ 1:1 scroll speed
-      scrollTrigger: {
-        trigger: Ref3.current,
-        start: "top bottom",
-        end: "+=500",
-        scrub: true,  // ⭐ scroll = animation
-          },
-        }
-
-      );
-    }
-
-
-    //ref4
-    if (Ref4.current) {
-      gsap.fromTo(
-        Ref4.current,
-        { 
-       x: 180,          // ⭐ zyada move
-      y: 180,
-      // ⭐ kam rotate
-      transformOrigin: "100% 100%",
-        },
-        {
-            x: 0,
-      y: 0,
- 
-      ease: "none",
-      scrollTrigger: {
-        trigger: Ref4.current,
-        start: "top bottom",
-        end: "+=500",
-        scrub: true,
-          },
-        }
-      );
-    }
-
-    //ref5
-   if (Ref5.current) {
-      gsap.fromTo(
-        Ref5.current,
-       { 
-        x: -220,        // ⭐ LEFT side se start
-      y: 120,         // thoda vertical move (natural feel)
-        // halka tilt
-      transformOrigin: "100% 100%", // bottom-left pivot
-        },
-        {
-       x: 0,
-      y: 0,
-      ease: "none",   // ⭐ 1:1 scroll speed
-      scrollTrigger: {
-        trigger: Ref5.current,
-        start: "top bottom",
-        end: "+=500",
-        scrub: true,  // ⭐ scroll = animation
-          },
-        }
-
-      );36
-    }
-
-  
-
- 
-   
-
-
-
-
-    return (): void => {
+    return () => {
       lenis.destroy();
       ScrollTrigger.killAll();
     };
   }, []);
 
   return (
-    <div   className=" h-auto w-full px-[84px]">
-        {/* hading and subtitel */}
-        <div className="w-full">
-            <h5  
-            className="text-[180px] mt-[100px] font-medium ">OUR</h5>
-            <h5  ref={titleRef}
-            className="text-[180px] text-7xl  mt-[-65px] font-medium ">PROCESS</h5>
+    <div className="w-full px-4 sm:px-8 lg:px-[84px] ">
+      {/* HEADING */}
+      <div className="w-full">
+        <h5 className="text-[72px] sm:text-[120px] lg:text-[180px] mt-20 font-medium">
+          OUR
+        </h5>
+        <h5
+          ref={titleRef}
+          className="text-[72px] sm:text-[120px] lg:text-[180px] mt-[-30px] sm:mt-[-50px] lg:mt-[-65px] font-medium"
+        >
+          PROCESS
+        </h5>
+      </div>
+
+      {/* CONTENT */}
+      <div className="w-full h-auto mt-20 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+          <div
+            ref={Ref1}
+            className="w-full max-w-[676px] h-[260px] sm:h-[320px] lg:h-[359px] bg-gradient-to-br from-blue-700 to-[#0e0d0d] rounded-3xl"
+          />
+
+          <div
+            ref={Ref2}
+            className="w-full max-w-[676px] h-[260px] sm:h-[320px] lg:h-[359px] bg-gradient-to-br from-red-700 to-[#0e0d0d] lg:mt-[200px] rounded-3xl"
+          />
+
+          <div
+            ref={Ref3}
+            className="w-full max-w-[676px] h-[260px] sm:h-[320px] lg:h-[359px] bg-gradient-to-br from-yellow-700 to-[#0e0d0d] lg:mt-[-200px] rounded-3xl"
+          />
+
+          <div
+            ref={Ref4}
+            className="w-full max-w-[676px] h-[260px] sm:h-[320px] lg:h-[359px] bg-gradient-to-br from-green-700 to-[#000000] rounded-3xl"
+          />
+
+          <div
+            ref={Ref5}
+            className="w-full max-w-[676px] h-[260px] sm:h-[320px] lg:h-[359px] bg-gradient-to-br from-orange-700 to-[#000000] lg:mt-[-200px] rounded-3xl"
+          />
         </div>
-
-
-        {/* content section */}
-
-        <div  className=" w-full h-auto mb-12 mt-30">
-          {/* section1 */}
-                <div  className="w-full h-auto grid  grid-cols-2 gap-10 ">
-                <div ref={Ref1} className="w-[676px] h-[359px] bg-gradient-to-br from-blue-700 to-[#3F3F3F]' rounded-3xl"></div>
-                <div ref={Ref2}  className="w-[676px] h-[359px] bg-gradient-to-br from-red-700 to-[#3F3F3F]' mt-[200px] rounded-3xl"></div>
-                <div ref={Ref3}  className="w-[676px] h-[359px] bg-gradient-to-br from-yellow-700 to-[#3F3F3F]' mt-[-200px] rounded-3xl"></div>
-                <div ref={Ref4}  className="w-[676px] h-[359px] bg-gradient-to-br from-green-700 to-[#3F3F3F]' rounded-3xl"></div>
-                <div ref={Ref5}  className="w-[676px] h-[359px] bg-gradient-to-br from-orange-700 to-[#3F3F3F]' mt-[-200px] rounded-3xl"></div>
-                </div>
-            </div>
-       
+      </div>
     </div>
   );
 }
-
- 

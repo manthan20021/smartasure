@@ -20,7 +20,7 @@ useEffect(() => {
   gsap.fromTo(
     el,
     {
-      width: 220,
+      width: 320,
       height: 80,
       borderRadius: 999,
      top:0
@@ -29,11 +29,11 @@ useEffect(() => {
       top:100,
       width: "1361px",
       height: "766px",
-      borderRadius: "50px",
+      borderRadius: "20px",
       ease: "power3.out",
       scrollTrigger: {
         trigger: el,
-        start: "top center",
+        start: "top 60%",
         end: "+=300",
         scrub: 1, // buttery smooth
       },
@@ -43,16 +43,16 @@ useEffect(() => {
 
 
     return(
-        <div className="h-screen w-full flex flex-col items-center">
+        <div className="sm:h-screen mt-20 sm:mt-0 h-auto w-screen flex flex-col items-center">
            {/* heding text section */}
-           <div className="mt-49 flex flex-col items-center justify-center leading-20  ">
-            <h1 className="text-[100px] font-semibold text-[#b4c9c9]">
+           <div className="sm:mt-49 mt-20 px-4  w-full flex flex-col items-center justify-center leading-none  sm:leading-20  ">
+            <h1 className="text-[50px] sm:text-[100px] font-semibold text-[#b4c9c9]">
                 SMARTASURE
                 </h1>
-                <h1 className="text-[100px] font-semibold text-[#b4c9c9]">
-                SMART LIVING. ASSURED
+                <h1 className="sm:text-[100px] text-[50px] font-semibold text-[#b4c9c9]">
+                SMART LIVING ASSURED.
                 </h1>
-                <p className="text-[18px] mt-5 leading-5 flex flex-col justify-center items-center">
+                <p className="sm:text-[18px] text-[12px] mt-5 leading-5 sm:flex flex-col justify-center items-center">
                     <span>Where intelligent technology blends seamlessly with refined</span> 
                     <span>livingcrea ng homes that sense, respond, and </span>
                     <span>elevate every moment. </span>
@@ -61,11 +61,11 @@ useEffect(() => {
                    
            </div>
            {/* video section */}
-           <div className="w-full mt-20 px-7 flex items-center justify-center">
-
-            <div className="fixed w-full flex items-center justify-between px-20 " >
+           <div className=" w-full sm:mt-20 mt-8 sm:px-7 flex-col flex items-center justify-center">
+            {/* booten section */}
+            <div className="sm:fixed w-full flex items-center justify-between sm:px-20 px-2" >
               <Link href="/web/experience">
-               <button className=" border-[.1px] border-[#3F3F3F] font-thin  text-[15px] text-[#B4C9C9] mr-2 px-5 py-5 rounded-full">
+               <button className=" border-[.1px] border-[#3F3F3F] font-thin  text-[15px] text-[#B4C9C9] sm:mr-2 sm:px-5 sm:py-5 px-2.5 py-1.5 sm:rounded-full">
                         EXPERIENCE SMARTASURE
                         </button>
               </Link>
@@ -75,7 +75,8 @@ useEffect(() => {
               target="_blank"
               rel="noopener noreferrer"
               >
-                <button className=" border-[.1px] from-[#0A0A0A]-700 border-[#3F3F3F] text-[15px] text-[#B4C9C9] px-5 py-5 rounded-full">
+                <button className=" border-[.1px] bg-[#25D366] from-[#0A0A0A]-700 border-[#25D366] font-bold
+                 text-[15px] text-[#000000] sm:px-5 sm:py-5 px-2.5 py-1.5 sm:rounded-full">
                         BOOK A PRIVATE DEMO
                         </button>
                         </a>
@@ -89,7 +90,7 @@ useEffect(() => {
       playsInline
       preload="none"
       ref={videoRef}
-      className="w-full  h-full object-cover will-change-transform"
+      className="w-full sm:mt-0 mt-8 h-full object-cover will-change-transform"
       
     />
            </div>

@@ -65,8 +65,8 @@ export default function FullscreenMenu() {
   return (
     <>
       {/* TOP BAR */}
-      <header className="fixed top-0 left-0 z-50 w-full px-20 flex items-center justify-between  py-5 mix-blend-difference">
-        <span className="text-white font-semibold tracking-widest">
+      <header className="fixed top-0 left-0 z-50 w-screen  sm:px-20 px-4 flex items-center justify-between  py-8 mix-blend-difference">
+        <span className="text-white  font-semibold tracking-widest">
           SMARTASURE
         </span>
 
@@ -81,7 +81,7 @@ export default function FullscreenMenu() {
       {/* FULLSCREEN MENU */}
       <div
         ref={menuRef}
-        className="fixed inset-0 z-40 hidden bg-gradient-to-br from-blue-700 to-[#000000] text-white"
+        className="fixed w-screen h-screen inset-0 z-40 hidden bg-gradient-to-br from-blue-700 to-[#000000] text-white"
       >
         <nav className="h-full flex items-center justify-center">
           <ul className="space-y-10 text-5xl md:text-7xl font-light">

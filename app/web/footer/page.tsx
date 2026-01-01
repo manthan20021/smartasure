@@ -1,54 +1,64 @@
-"use client"
+"use client";
 
-export default function Footer(){
-    return(
-        <div className="h-[500px] w-full ">
-            <div className="flex items-center justify-center border-b-[.1px] border-gray-600 ">
-                {/* content */}
-                <div className=" h-[500px]"></div>
-                
-                {/* list */}
-                 <div className="w-full flex justify-between px-5 ">
-                <ul className="h-full leading-10">
-                    <li className="text-xl mb-2.5 text-gray-500">HOW IT WORKS</li>
-                    <li className="font-thin text-gray-300 text-[14px]">Private Consulta on </li>
-                    <li className="font-thin text-gray-300 text-[14px]" >Intelligent Design</li>
-                    <li className="font-thin text-gray-300 text-[14px]" >Precision Installa on </li>
-                    <li className="font-thin text-gray-300 text-[14px]" >Seamless Integra on</li>
-                    <li className="font-thin text-gray-300 text-[14px]" >Ongoing Support</li>
-                </ul>
+export default function Footer() {
+  return (
+    <footer className="w-full bg-black text-white">
+      {/* TOP SECTION */}
+      <div className="border-b border-gray-600">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-16">
 
-                <ul className="h-full leading-10">
-                    <li className="text-xl mb-2.5 text-gray-500">WHAT WE CREATE</li>
-                    <li className="font-thin text-gray-300 text-[14px]">Designer Smart Switches </li>
-                    <li className="font-thin text-gray-300 text-[14px]">Home Theatre Automa on </li>
-                    <li className="font-thin text-gray-300 text-[14px]">Curtain & Blind Automa on </li>
-                    <li className="font-thin text-gray-300 text-[14px]">Gate & Access Automa on </li>
-                    <li className="font-thin text-gray-300 text-[14px]">Smart Locks & Security</li>
-                    <li className="font-thin text-gray-300 text-[14px]">Unified App & Voice Control</li>
-                </ul>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+            {/* HOW IT WORKS */}
+            <ul className="leading-8">
+              <li className="text-lg mb-4 text-gray-500">HOW IT WORKS</li>
+              <li className="font-thin text-gray-300 text-sm">Private Consultation</li>
+              <li className="font-thin text-gray-300 text-sm">Intelligent Design</li>
+              <li className="font-thin text-gray-300 text-sm">Precision Installation</li>
+              <li className="font-thin text-gray-300 text-sm">Seamless Integration</li>
+              <li className="font-thin text-gray-300 text-sm">Ongoing Support</li>
+            </ul>
 
-                <ul className="h-full leading-10">
-                    <li className="text-xl mb-2.5 text-gray-500">SOCIAL-MEDIA</li>
-                    <li className="font-thin text-gray-300 text-[14px]">Instagram</li>
-                    <li className="font-thin text-gray-300 text-[14px]">WhatsApp</li>
-                </ul>
+            {/* WHAT WE CREATE */}
+            <ul className="leading-8">
+              <li className="text-lg mb-4 text-gray-500">WHAT WE CREATE</li>
+              <li className="font-thin text-gray-300 text-sm">Designer Smart Switches</li>
+              <li className="font-thin text-gray-300 text-sm">Home Theatre Automation</li>
+              <li className="font-thin text-gray-300 text-sm">Curtain & Blind Automation</li>
+              <li className="font-thin text-gray-300 text-sm">Gate & Access Automation</li>
+              <li className="font-thin text-gray-300 text-sm">Smart Locks & Security</li>
+              <li className="font-thin text-gray-300 text-sm">Unified App & Voice Control</li>
+            </ul>
 
-                <ul className="h-full leading-10">
-                    <li className="text-xl mb-2.5 text-gray-500">Company</li>
-                    <li className="font-thin text-gray-300 text-[14px]">home</li>
-                    <li className="font-thin text-gray-300 text-[14px]">about</li>
-                    <li className="font-thin text-gray-300 text-[14px]">BrandPhilosophy </li>
-                    <li className="font-thin text-gray-300 text-[14px]">what we creat</li>
-                    <li className="font-thin text-gray-300 text-[14px]">experience</li>
-                </ul>                
-            </div>    
-            </div>
+            {/* SOCIAL */}
+            <ul className="leading-8">
+              <li className="text-lg mb-4 text-gray-500">SOCIAL MEDIA</li>
+              <li className="font-thin text-gray-300 text-sm">Instagram</li>
+              <li className="font-thin text-gray-300 text-sm">WhatsApp</li>
+            </ul>
 
-            <div className="p-8 flex justify-between items-center">
-                <p>© 2025 SmartaSure All rights reserved</p>
-                <p>Developd by: <span className="border-b-[.2px] border-gray-500 text-green-600">Manthan</span></p>
-            </div>
+            {/* COMPANY */}
+            <ul className="leading-8">
+              <li className="text-lg mb-4 text-gray-500">COMPANY</li>
+              <li className="font-thin text-gray-300 text-sm">Home</li>
+              <li className="font-thin text-gray-300 text-sm">About</li>
+              <li className="font-thin text-gray-300 text-sm">Brand Philosophy</li>
+              <li className="font-thin text-gray-300 text-sm">What We Create</li>
+              <li className="font-thin text-gray-300 text-sm">Experience</li>
+            </ul>
+          </div>
         </div>
-    )
+      </div>
+
+      {/* BOTTOM BAR */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-6 flex flex-col sm:flex-row gap-4 justify-between items-center text-sm text-gray-400">
+        <p>© 2025 SmartaSure. All rights reserved.</p>
+        <p>
+          Developed by{" "}
+          <span className="border-b border-gray-500 text-green-500">
+            Manthan
+          </span>
+        </p>
+      </div>
+    </footer>
+  );
 }
