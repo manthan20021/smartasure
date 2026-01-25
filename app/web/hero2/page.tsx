@@ -28,7 +28,7 @@ useEffect(() => {
     {
       top:100,
       width: "1361px",
-      height: "766px",
+      height: "666px",
       borderRadius: "20px",
       ease: "power3.out",
       scrollTrigger: {

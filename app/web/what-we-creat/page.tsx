@@ -114,6 +114,19 @@ export default function HorizontalTest() {
           {/* PANEL 4 */}
           <div className="panel w-full h-screen flex items-center justify-center">
             <video
+              src="https://res.cloudinary.com/duisqp8c9/video/upload/v1769323185/Firefly_A_cinematic_demo_video_of_a_modern_smart_home_adopting_a_smart_solar_energy_solution._Show_a_ezswcl.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="none"
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+            {/* PANEL 5*/}
+          <div className="panel w-full h-screen flex items-center justify-center">
+            <video
               src="https://res.cloudinary.com/duisqp8c9/video/upload/v1767192666/curten_tflior.mp4"
               autoPlay
               loop

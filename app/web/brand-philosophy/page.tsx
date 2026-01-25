@@ -1,6 +1,6 @@
 "use client";
 
-import { Montserrat } from "next/font/google";
+//import { Montserrat } from "next/font/google";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
@@ -8,10 +8,10 @@ import Lenis from "lenis";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
 
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["700", "800", "900"],
-});
+// const montserrat = Montserrat({
+//   subsets: ["latin"],
+//   weight: ["700", "800", "900"],
+// });
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -44,15 +44,15 @@ export default function BrandPhilosophy() {
       gsap.fromTo(
         sectionRef.current,
         {
-          x: -220,
+          x: -320,
           y: 120,
-          rotation: -8,
+          
           transformOrigin: "0% 100%",
         },
         {
           x: 0,
           y: 0,
-          rotation: 0,
+          
           ease: "none",
           scrollTrigger: {
             trigger: sectionRef.current,
@@ -97,13 +97,13 @@ export default function BrandPhilosophy() {
         bg-[#d5d5d5] 
         overflow-hidden 
         rounded-t-4xl
+        mt-[500px]
         px-4 sm:px-0
       "
     >
       {/* BIG BRAND TEXT */}
       <h1
         className={`
-          ${montserrat.className}
           absolute
           top-90 sm:top-10
           left-1/2 -translate-x-1/2
@@ -121,7 +121,7 @@ export default function BrandPhilosophy() {
 
       {/* IMAGE */}
       <Image
-        src="/my2.png"
+        src="/founder.png"
         alt="hero"
         width={500}
         height={800}
@@ -195,7 +195,7 @@ export default function BrandPhilosophy() {
               d="M 100,100 m -75,0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0"
             />
           </defs>
-          <text fontSize="12" sm-fontSize="15" fill="#000" letterSpacing="2">
+          <text fontSize="12" fill="#000" letterSpacing="2">
             <textPath href="#circlePath">
               TECHNOLOGY SHOULD BE FELT, NOT SEEN •
             </textPath>

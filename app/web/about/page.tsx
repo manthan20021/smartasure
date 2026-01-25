@@ -158,11 +158,11 @@ export default function About() {
 {/* big screen */}
 
 <div 
-className=" sm:block hidden h-full w-full sm:pt-[600px] pt-28 sm:px-[84px] px-3"> 
+className=" sm:block hidden h-full w-full  pt-28 sm:px-[84px] px-3"> 
 {/* hading and subtitel */} 
 <div className="w-full mb-15"> 
   <h5 ref={titleRefbit} className="sm:text-[180px] text-7xl sm:mt-[100px] font-medium sm:mb-7 ">
-    WHOWE
+    WHO WE
     </h5> 
     <h5 ref={textRef1big} className="sm:text-[180px] text-7xl sm:mt-[-65px] font-medium ">
       ARE
@@ -176,9 +176,9 @@ className=" sm:block hidden h-full w-full sm:pt-[600px] pt-28 sm:px-[84px] px-3"
           <h5 ref={textRef1big} 
           className="w-[567px] 
           h-auto pr-8"> 
-          <h1 className="sm:text-[80px] text-5xl font-medium">
+          <span className="sm:text-[80px] text-5xl font-medium">
             SMARTASURE
-            </h1> 
+            </span> 
             <p className="text-[25px] text-[#999999]">
               SmartaSure is a premium smart home automa on brand by Agryen 
               Technologies LLP. We design intelligent environments that 
@@ -199,9 +199,9 @@ className=" sm:block hidden h-full w-full sm:pt-[600px] pt-28 sm:px-[84px] px-3"
                     <h5 
                     ref={textRef2big} 
                     className="w-[567px] pl-12 h-auto"> 
-                    <h1 className="text-[80px] mt-10   font-medium">
+                    <span className="text-[80px] mt-10   font-medium">
                       VISION
-                      </h1> 
+                      </span> 
                       <p className="text-[25px] text-[#999999]"> 
                         Redefining modern living through intelligent, elegant technology. 
                         </p> </h5> 
@@ -209,9 +209,9 @@ className=" sm:block hidden h-full w-full sm:pt-[600px] pt-28 sm:px-[84px] px-3"
                         <div className="h-auto w-full flex items-center justify-between relative top-[-100] "> 
                           {/* text section */} 
                           <h5 ref={textRef3big} className="w-[567px] h-auto"> 
-                            <h1 className="text-[80px] mt-10 font-medium">
+                            <span className="text-[80px] mt-10 font-medium">
                               MISSION
-                              </h1> 
+                              </span> 
                               <p className="text-[25px] text-[#999999]"> 
                                  To deliver world-class automa on experiences 
                                 <br/>  To merge innova on with human behavior 
@@ -250,9 +250,9 @@ className=" sm:block hidden h-full w-full sm:pt-[600px] pt-28 sm:px-[84px] px-3"
         
           className="w-full sm:w-[567px]"
         >
-          <h1 className="text-5xl sm:text-[80px] font-medium">
+          <span className="text-5xl sm:text-[80px] font-medium">
             SMARTASURE
-          </h1>
+          </span>
           <p className="text-base sm:text-[25px] text-[#999999]">
             SmartaSure is a premium smart home automation brand by
             Agryen Technologies LLP.
@@ -309,15 +309,8 @@ className=" sm:block hidden h-full w-full sm:pt-[600px] pt-28 sm:px-[84px] px-3"
             • Homes built for decades
           </p>
         </div>
-
-        <Image
-      
-          src="/block3.png"
-          alt="img3"
-          width={794}
-          height={530}
-          className="w-full sm:w-[794px] h-auto sm:h-[530px] rounded-3xl"
-        />
+        
+       
       </div>
     </div>
 

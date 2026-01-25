@@ -3,6 +3,7 @@
 import { useRef, useState, useEffect } from "react";
 import Link from "next/link";
 import gsap from "gsap";
+import Image from "next/image";
 
 export default function FullscreenMenu() {
   const menuRef = useRef<HTMLDivElement>(null);
@@ -65,10 +66,14 @@ export default function FullscreenMenu() {
   return (
     <>
       {/* TOP BAR */}
-      <header className="fixed top-0 left-0 z-50 w-screen  sm:px-20 px-4 flex items-center justify-between  py-8 mix-blend-difference">
-        <span className="text-white  font-semibold tracking-widest">
-          SMARTASURE
-        </span>
+      <header className="fixed top-0 left-0 z-50 w-screen  sm:px-20 px-4 flex items-center justify-between  mix-blend-difference">
+        <Image 
+        alt="img" 
+        width={90} 
+        height={60} 
+        src="/logo.png" 
+        className=" w-50 h-30" />
+          
 
         <button
           onClick={() => setOpen((p) => !p)}

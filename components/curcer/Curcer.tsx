@@ -1,48 +1,77 @@
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
 
-export default function Curcer(){
-    
-     const dotRef = useRef<HTMLDivElement>(null);
+export default function Cursor() {
+  const bigRingRef = useRef<HTMLDivElement>(null);
+  const smallRingRef = useRef<HTMLDivElement>(null);
+  const pointRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const createSmoke = (e: MouseEvent) => {
-      const smoke = document.createElement("div");
-      document.body.appendChild(smoke);
+    const moveCursor = (e: MouseEvent) => {
+      // POINT – instant (sticks to cursor)
+      gsap.set(pointRef.current, {
+        x: e.clientX,
+        y: e.clientY,
+      });
 
-      smoke.style.position = "fixed";
-      smoke.style.left = `${e.clientX}px`;
-      smoke.style.top = `${e.clientY}px`;
-      smoke.style.width = "6px";
-      smoke.style.height = "6px";
-      smoke.style.borderRadius = "50%";
-      smoke.style.background = "rgba(169,0,255)";
-      smoke.style.pointerEvents = "none";
-      smoke.style.filter = "blur(2px)";
-      smoke.style.transform = "translate(-50%, -50%)";
-      smoke.style.zIndex = "9999";
+      // SMALL RING – little delay
+      gsap.to(smallRingRef.current, {
+        x: e.clientX,
+        y: e.clientY,
+        duration: 0.28,
+        ease: "power3.out",
+      });
 
-      gsap.to(smoke, {
-        scale: 3,   
-        opacity: 0,
-        y: -20,
-        duration: 0.8,
-        ease: "power2.out",
-        onComplete: () => smoke.remove(),
+      // BIG RING – more delay
+      gsap.to(bigRingRef.current, {
+        x: e.clientX,
+        y: e.clientY,
+        duration: 0.55,
+        ease: "power3.out",
       });
     };
 
-    window.addEventListener("mousemove", createSmoke);
-    return () => window.removeEventListener("mousemove", createSmoke);
+    window.addEventListener("mousemove", moveCursor);
+    return () => window.removeEventListener("mousemove", moveCursor);
   }, []);
 
-
-
-
-    return(
-         <div
-      ref={dotRef}
-      className="pointer-events-none fixed left-0 top-0 z-[9999] h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-transparent mix-blend-difference"
+  return (
+    <>
+      {/* BIG RING */}
+      <div
+        ref={bigRingRef}
+        className="pointer-events-none fixed left-0 top-0 z-[9997]
+                   -translate-x-1/2 -translate-y-1/2
+                   h-16 w-16 rounded-full border-2"
+        style={{
+          borderColor: "#464cef",
+          boxShadow: "0 0 22px #46a3ef",
+        }}
       />
-    )
+
+      {/* SMALL RING */}
+      <div
+        ref={smallRingRef}
+        className="pointer-events-none fixed left-0 top-0 z-[9998]
+                   -translate-x-1/2 -translate-y-1/2
+                   h-10 w-10 rounded-full border-2"
+        style={{
+          borderColor: "#abbafc",
+          boxShadow: "0 0 16px #fcabf7",
+        }}
+      />
+
+      {/* POINT */}
+      <div
+        ref={pointRef}
+        className="pointer-events-none fixed left-0 top-0 z-[9999]
+                   -translate-x-1/2 -translate-y-1/2
+                   h-2 w-2 rounded-full"
+        style={{
+          backgroundColor: "#fde68a",
+          boxShadow: "0 0 10px #fde68a",
+        }}
+      />
+    </>
+  );
 }
