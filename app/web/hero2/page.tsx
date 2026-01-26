@@ -54,7 +54,7 @@ useEffect(() => {
                 </h1>
                 <p className="sm:text-[18px] text-[12px] mt-5 leading-5 sm:flex flex-col justify-center items-center">
                     <span>Where intelligent technology blends seamlessly with refined</span> 
-                    <span>livingcrea ng homes that sense, respond, and </span>
+                    <span>living creating homes that sense, respond, and </span>
                     <span>elevate every moment. </span>
                     </p>
 

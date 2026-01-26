@@ -46,12 +46,13 @@ export default function BrandPhilosophy() {
         {
           x: -320,
           y: 120,
-          
+          rotate: -9, 
           transformOrigin: "0% 100%",
         },
         {
           x: 0,
           y: 0,
+          rotate:0,
           
           ease: "none",
           scrollTrigger: {
@@ -97,7 +98,6 @@ export default function BrandPhilosophy() {
         bg-[#d5d5d5] 
         overflow-hidden 
         rounded-t-4xl
-        mt-[500px]
         px-4 sm:px-0
       "
     >
@@ -121,7 +121,7 @@ export default function BrandPhilosophy() {
 
       {/* IMAGE */}
       <Image
-        src="/founder.png"
+        src="/founders.png"
         alt="hero"
         width={500}
         height={800}

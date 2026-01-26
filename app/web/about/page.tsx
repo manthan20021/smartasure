@@ -158,7 +158,7 @@ export default function About() {
 {/* big screen */}
 
 <div 
-className=" sm:block hidden h-full w-full  pt-28 sm:px-[84px] px-3"> 
+className=" sm:block hidden sm:pt-[500px] h-full w-full  pt-28 sm:px-[84px] px-3"> 
 {/* hading and subtitel */} 
 <div className="w-full mb-15"> 
   <h5 ref={titleRefbit} className="sm:text-[180px] text-7xl sm:mt-[100px] font-medium sm:mb-7 ">
@@ -180,11 +180,11 @@ className=" sm:block hidden h-full w-full  pt-28 sm:px-[84px] px-3">
             SMARTASURE
             </span> 
             <p className="text-[25px] text-[#999999]">
-              SmartaSure is a premium smart home automa on brand by Agryen 
-              Technologies LLP. We design intelligent environments that 
-              enhance life without demanding a en on. Every system we 
+              SmartaSure is a premium smart home automation on brand by <span className="font-bold text-white">Agryen 
+              Technologies LLP.</span> We design intelligent environments that 
+              enhance life without demanding attention en on. Every system we 
               create is tailored. Every experience is deliberate. 
-              Every detail ma ers. 
+              Every detail maters. 
               </p> 
               </h5> 
               {/* img section */} 
@@ -213,14 +213,14 @@ className=" sm:block hidden h-full w-full  pt-28 sm:px-[84px] px-3">
                               MISSION
                               </span> 
                               <p className="text-[25px] text-[#999999]"> 
-                                 To deliver world-class automa on experiences 
-                                <br/>  To merge innova on with human behavior 
+                                 To deliver world-class automaton experiences 
+                                <br/>  To merge innovation with human behavior 
                                 <br/>  To ensure longevity, privacy, and reliability 
                                 <br/>  To build homes that remain relevant for decades 
                                 </p> </h5> 
                                 {/* img section */} 
                                 <div> 
-                                  <Image alt="img3" width={794} height={530} src="/block3.png" className="w-[794px] h-[530px] mx-auto rounded-3xl" ref={imgRef3big} /> 
+                                  <Image alt="img3" width={794} height={530} src="/my.jpeg" className="w-[794px] h-[530px] mx-auto rounded-3xl" ref={imgRef3big} /> 
                                   </div> 
                                   </div> 
                                   </div> 

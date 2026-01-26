@@ -37,12 +37,12 @@ export default function Home() {
          {!loaded && <Loader onComplete={() => setLoaded(true)} />}
 <TrionnCursor/>
  <Hero2/>
+ <About/>
     <BrandPhilosophy/>
     <WhatWeCreat/>
     <SmartHomeExperience/>
     <Hero/>
     <HowItWorks/>
-     <About/>
     <Footer/>
     </ReactLenis>
    
