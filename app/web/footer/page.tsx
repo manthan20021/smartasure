@@ -4,6 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
+
+
   return (
     <footer className="w-full bg-black text-white">
       {/* TOP SECTION */}
@@ -42,10 +44,13 @@ export default function Footer() {
             </ul>
 
             {/* SOCIAL */}
-            <ul className="leading-8">
+            <ul className="leading-8 flex flex-col ">
               <li className="text-lg mb-4 text-gray-500">SOCIAL MEDIA</li>
-              <li className="font-thin text-gray-300 text-sm">Instagram</li>
-              <li className="font-thin text-gray-300 text-sm">WhatsApp</li>
+              <Link href="https://www.instagram.com/smartasure?igsh=N3dsYnpzOXhiemZq" className="text-lg mb-4 text-gray-500">Instagram</Link>
+              <Link
+              href={`https://wa.me/7588876025?`}
+              >WhatsApp</Link>
+              
             </ul>
 
             {/* COMPANY */}
