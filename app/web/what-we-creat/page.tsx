@@ -48,12 +48,13 @@ export default function HorizontalTest() {
   }, []);
 
   return (
-    <section className="w-full sm:block hidden bg-[#D5D5D5]">
+    <section className="w-full bg-[#D5D5D5]">
       <div
         ref={sectionRef}
         className="
           relative
-          h-screen
+          sm:h-screen
+          h-auto
           w-full
           overflow-hidden
         "
@@ -69,7 +70,7 @@ export default function HorizontalTest() {
           "
         >
           {/* PANEL 1 */}
-          <div className="panel  w-full h-screen flex items-center justify-center">
+          <div className="panel w-full h-screen flex items-center justify-center">
             <div className="text-center">
               <h5 className="text-[42px] sm:text-[64px] lg:text-[160px] font-medium text-white">
                 AN ECOSYSTEM

@@ -43,7 +43,7 @@ useEffect(() => {
 
 
     return(
-        <div className="sm:h-screen mt-20 sm:mt-0 h-auto w-screen flex flex-col items-center">
+        <div className="sm:h-screen mt-20 sm:mt-0 h-auto w-screen flex flex-col items-center bg-[#0A0A0A] ">
            {/* heding text section */}
            <div className="sm:mt-49 mt-20 px-4  w-full flex flex-col items-center justify-center leading-none  sm:leading-20  ">
             <h1 className="text-[50px] sm:text-[100px] font-semibold text-[#b4c9c9]">
@@ -52,7 +52,7 @@ useEffect(() => {
                 <h1 className="sm:text-[100px] text-[50px] font-semibold text-[#b4c9c9]">
                 SMART LIVING ASSURED.
                 </h1>
-                <p className="sm:text-[18px] text-[12px] mt-5 leading-5 sm:flex flex-col justify-center items-center">
+                <p className="sm:text-[18px] text-[12px] text-white mt-5 leading-5 sm:flex flex-col justify-center items-center">
                     <span>Where intelligent technology blends seamlessly with refined</span> 
                     <span>living creating homes that sense, respond, and </span>
                     <span>elevate every moment. </span>

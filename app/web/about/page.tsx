@@ -154,7 +154,7 @@ export default function About() {
 
   return (
 
-    <div>
+    <div className="bg-[#0A0A0A] text-[#EDEDED]">
 {/* big screen */}
 
 <div 

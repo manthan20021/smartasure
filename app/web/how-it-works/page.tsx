@@ -97,13 +97,13 @@ export default function HowItWorks() {
       </div>
 
       {/* CONTENT */}
-      <div className="w-full h-auto mt-20 mb-16">
+      <div className="w-full h-auto mt-20 mb-16 text-[#EDEDED]">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
           <div
             ref={Ref1}
             className="w-full max-w-[676px] h-[260px] sm:h-[320px] lg:h-[359px] bg-gradient-to-br from-blue-700 to-[#0e0d0d] flex flex-col item-center justify-center   rounded-3xl"
           > 
-          <h1 className="text-[72px] sm:text-[20px] lg:text-[70px] font-medium bg-[#0A0A0A] ">Private Consultation </h1>
+          <h1 className="text-[30px] lg:text-[70px] font-medium bg-[#0A0A0A] ">Private Consultation </h1>
           <p>We understand your lifestyle, space, and expecta ons. </p>
           </div>
 
@@ -111,7 +111,7 @@ export default function HowItWorks() {
             ref={Ref2}
             className="w-full max-w-[676px] h-[260px] sm:h-[320px] lg:h-[359px] bg-gradient-to-br from-red-700 to-[#0e0d0d] lg:mt-[200px] flex flex-col item-center justify-center rounded-3xl"
           >
-             <h1 className="text-[72px] sm:text-[20px] lg:text-[70px] font-medium bg-[#0A0A0A] ">Intelligent Design </h1>
+             <h1 className="text-[30px] lg:text-[70px] font-medium bg-[#0A0A0A] ">Intelligent Design </h1>
           <p>Custom automation plans crafted around how you live.</p>
           </div>
 
@@ -119,7 +119,7 @@ export default function HowItWorks() {
             ref={Ref3}
             className="w-full max-w-[676px] h-[260px] sm:h-[320px] lg:h-[359px] bg-gradient-to-br from-yellow-700 to-[#0e0d0d] lg:mt-[-200px] flex flex-col item-center justify-center rounded-3xl"
           >
-             <h1 className="text-[72px] sm:text-[20px] lg:text-[70px] font-medium bg-[#0A0A0A] ">Precision Installation</h1>
+             <h1 className="text-[30px] lg:text-[70px] font-medium bg-[#0A0A0A] ">Precision Installation</h1>
           <p>Executed by trained professionals with absolute care.</p>
           </div>
 
@@ -127,7 +127,7 @@ export default function HowItWorks() {
             ref={Ref4}
             className="w-full max-w-[676px] h-[260px] sm:h-[320px] lg:h-[359px] bg-gradient-to-br from-green-700 to-[#000000]  flex flex-col item-center justify-center rounded-3xl"
           >
-            <h1 className="text-[72px] sm:text-[20px] lg:text-[67px] font-medium bg-[#0A0A0A] ">Seamless Integration</h1>
+            <h1 className="text-[30px] lg:text-[68px] font-medium bg-[#0A0A0A] ">Seamless Integration</h1>
           <p>Unified control through app and voice assistants.</p>
           </div>
 
@@ -135,7 +135,7 @@ export default function HowItWorks() {
             ref={Ref5}
             className="w-full max-w-[676px] h-[260px] sm:h-[320px] lg:h-[359px] bg-gradient-to-br from-orange-700 to-[#000000] lg:mt-[-200px] flex flex-col item-center justify-center rounded-3xl"
           >
-            <h1 className="text-[72px] sm:text-[20px] lg:text-[70px] font-medium bg-[#0A0A0A] "> Ongoing Support </h1>
+            <h1 className="text-[30px] lg:text-[70px] font-medium bg-[#0A0A0A] "> Ongoing Support </h1>
           <p>Because luxury deserves reliability.</p>
           </div>
         </div>

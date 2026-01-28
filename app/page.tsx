@@ -33,7 +33,7 @@ export default function Home() {
   }, [loaded]);
   
   return (    
-       <ReactLenis root className="h-full w-full bg-[#0F0F0F]">
+       <ReactLenis root className="h-full w-full ">
          {!loaded && <Loader onComplete={() => setLoaded(true)} />}
 <TrionnCursor/>
  <Hero2/>
