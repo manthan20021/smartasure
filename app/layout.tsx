@@ -24,9 +24,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="bg-[#0A0A0A]">
+    <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased  `}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#0A0A0A] text-[#EDEDED] `}
       >
         <FullscreenMenu/>
         {children}

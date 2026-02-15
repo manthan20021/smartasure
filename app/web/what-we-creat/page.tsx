@@ -48,7 +48,7 @@ export default function HorizontalTest() {
   }, []);
 
   return (
-    <section className="w-full bg-[#D5D5D5]">
+    <section className="w-full sm:block hidden bg-[#D5D5D5]">
       <div
         ref={sectionRef}
         className="
@@ -140,5 +140,6 @@ export default function HorizontalTest() {
         </div>
       </div>
     </section>
+    
   );
 }

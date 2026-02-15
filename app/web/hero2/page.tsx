@@ -43,16 +43,17 @@ useEffect(() => {
 
 
     return(
-        <div className="sm:h-screen mt-20 sm:mt-0 h-auto w-screen flex flex-col items-center bg-[#0A0A0A] ">
+        <div className="sm:h-screen mt-20 sm:mt-0  rounded-4xl pb-8 h-auto w-screen flex flex-col items-center">
            {/* heding text section */}
-           <div className="sm:mt-49 mt-20 px-4  w-full flex flex-col items-center justify-center leading-none  sm:leading-20  ">
-            <h1 className="text-[50px] sm:text-[100px] font-semibold text-[#b4c9c9]">
+           <div className="sm:mt-49 mt-20 px-4  sm:w-full w-[400px] flex flex-col items-center justify-center leading-none  sm:leading-20  ">
+            <h1 className="text-[30px] sm:text-[100px] font-semibold text-[#b4c9c9]">
                 SMARTASURE
                 </h1>
-                <h1 className="sm:text-[100px] text-[50px] font-semibold text-[#b4c9c9]">
+                <h1 className="sm:text-[100px] text-[30px] font-semibold text-[#b4c9c9]">
                 SMART LIVING ASSURED.
                 </h1>
-                <p className="sm:text-[18px] text-[12px] text-white mt-5 leading-5 sm:flex flex-col justify-center items-center">
+
+                <p className="sm:text-[18px] text-[13px] font-thin sm:font-semibold text-white mt-5 leading-5  flex flex-col justify-center items-center">
                     <span>Where intelligent technology blends seamlessly with refined</span> 
                     <span>living creating homes that sense, respond, and </span>
                     <span>elevate every moment. </span>
@@ -63,23 +64,25 @@ useEffect(() => {
            {/* video section */}
            <div className=" w-full sm:mt-20 mt-8 sm:px-7 flex-col flex items-center justify-center">
             {/* booten section */}
-            <div className="sm:fixed w-full flex items-center justify-between sm:px-20 px-2" >
-              <Link href="/web/experience">
-               <button className=" border-[.1px] border-[#3F3F3F] font-thin  text-[15px] text-[#B4C9C9] sm:mr-2 sm:px-5 sm:py-5 px-2.5 py-1.5 sm:rounded-full">
-                        EXPERIENCE SMARTASURE
-                        </button>
-              </Link>
-
-              <a
+            <div className="sm:fixed w-full flex items-center justify-center sm:justify-between  sm:px-20 px-2" >
+               <a
               href={`https://wa.me/7588876025?text=${message}`}
               target="_blank"
               rel="noopener noreferrer"
               >
-                <button className=" border-[.1px] bg-[#25D366] from-[#0A0A0A]-700 border-[#25D366] font-bold
-                 text-[15px] text-[#000000] sm:px-5 sm:py-5 px-2.5 py-1.5 sm:rounded-full">
+                <button className=" border-[.1px] bg-white from-[#0A0A0A]-700  sm:font-bold
+                 sm:text-[15px] text-[12px] text-[#000000] sm:px-5 sm:py-5 px-2.5 py-1.5 rounded-full">
                         BOOK A PRIVATE DEMO
                         </button>
                         </a>
+
+              <Link href="/web/experience">
+               <button className=" border-[.1px] bg-transparent  font-thin text-[12px] sm:text-[15px] ml-2 sm:px-5 sm:py-5 px-2.5 py-1.5 rounded-full">
+                        EXPERIENCE SMARTASURE
+                        </button>
+              </Link>
+
+             
             </div>
             
             <video
@@ -90,7 +93,7 @@ useEffect(() => {
       playsInline
       preload="none"
       ref={videoRef}
-      className="w-full sm:mt-0 mt-8 h-full object-cover will-change-transform"
+      className="w-6 sm:mt-0 mt-8 h-full object-cover will-change-transform"
       
     />
            </div>
