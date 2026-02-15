@@ -154,7 +154,7 @@ export default function About() {
 
   return (
 
-    <div className="bg-[#0A0A0A] text-[#EDEDED]">
+    <div className="bg-[#0A0A0A] text-[#EDEDED] sm:block hidden ">
 {/* big screen */}
 
 <div 
