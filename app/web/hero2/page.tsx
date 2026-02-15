@@ -43,17 +43,19 @@ useEffect(() => {
 
 
     return(
-        <div className="sm:h-screen mt-20 sm:mt-0  rounded-4xl pb-8 h-auto w-screen flex flex-col items-center bg-[url('/bg.png')] bg-cover bg-center ">
+        <div className="sm:h-screen relative mt-20 sm:mt-0  rounded-4xl pb-8 h-auto w-screen flex flex-col items-center  bg-[url('/bg.png')] bg-cover bg-center ">
+                    <div className="absolute right-0 top-0 bottom-0 w-full bg-gradient-to-b from-black  to-transparent z-0 pointer-events-none"></div>
+
            {/* heding text section */}
-           <div className="sm:mt-49 mt-20 px-4  sm:w-full w-[400px] flex flex-col items-center justify-center leading-none  sm:leading-20  ">
-            <h1 className="text-[30px] sm:text-[100px] font-semibold text-[#b4c9c9]">
+           <div className="sm:mt-49 mt-20 px-4  sm:w-full w-[400px] flex flex-col items-center  justify-center leading-none  sm:leading-20  ">
+            <h1 className="text-[30px] z-10 sm:text-[100px] font-semibold text-[#b4c9c9]">
                 SMARTASURE
                 </h1>
-                <h1 className="sm:text-[100px] text-[30px] font-semibold text-[#b4c9c9]">
+                <h1 className="sm:text-[100px] z-10 text-[30px] font-semibold text-[#b4c9c9]">
                 SMART LIVING ASSURED.
                 </h1>
 
-                <p className="sm:text-[18px] text-[13px] font-thin sm:font-semibold text-white mt-5 leading-5  flex flex-col justify-center items-center">
+                <p className="sm:text-[18px] z-10 text-[13px] font-thin sm:font-semibold text-white mt-5 leading-5  flex flex-col justify-center items-center">
                     <span>Where intelligent technology blends seamlessly with refined</span> 
                     <span>living creating homes that sense, respond, and </span>
                     <span>elevate every moment. </span>
@@ -62,7 +64,7 @@ useEffect(() => {
                    
            </div>
            {/* video section */}
-           <div className=" w-full sm:mt-20 mt-8 sm:px-7 flex-col flex items-center justify-center">
+           <div className=" w-full z-10 sm:mt-20 mt-8 sm:px-7 flex-col flex items-center justify-center">
             {/* booten section */}
             <div className="sm:fixed w-full flex items-center justify-center sm:justify-between  sm:px-20 px-2" >
                <a
