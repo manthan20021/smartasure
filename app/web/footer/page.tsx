@@ -67,7 +67,7 @@ export default function Footer() {
       </div>
 
       {/* BOTTOM BAR */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-6 flex flex-col sm:flex-row gap-4 justify-between items-center text-sm text-gray-400">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-6 flex flex-col sm:flex-row gap-4 sm:justify-between justify-center items-center text-sm text-gray-400">
         <p>© 2025 SmartaSure. All rights reserved.</p>
         <p>A Brand of Agryen Technologies LLP GST: 27ACMFA5083H1Z5</p>
         <p>
