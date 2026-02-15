@@ -43,7 +43,7 @@ useEffect(() => {
 
 
     return(
-        <div className="sm:h-screen mt-20 sm:mt-0  rounded-4xl pb-8 h-auto w-screen flex flex-col items-center">
+        <div className="sm:h-screen mt-20 sm:mt-0  rounded-4xl pb-8 h-auto w-screen flex flex-col items-center bg-[url('/bg.png')] bg-cover bg-center ">
            {/* heding text section */}
            <div className="sm:mt-49 mt-20 px-4  sm:w-full w-[400px] flex flex-col items-center justify-center leading-none  sm:leading-20  ">
             <h1 className="text-[30px] sm:text-[100px] font-semibold text-[#b4c9c9]">
@@ -93,9 +93,23 @@ useEffect(() => {
       playsInline
       preload="none"
       ref={videoRef}
-      className="w-6 sm:mt-0 mt-8 h-full object-cover will-change-transform"
+      className="w-full sm:mt-0 mt-8 h-full hidden md:block object-cover will-change-transform"
       
     />
+
+    {/* for mobaill scrin */}
+
+       <video
+      src="https://res.cloudinary.com/duisqp8c9/video/upload/v1767191496/Firefly_Create_a_high-end_cinematic_advertisement_video_for_a_premium_Smart_Home_Automation_ecosyste_weeyxl.mp4"
+      autoPlay
+      loop
+      muted
+      playsInline
+      preload="none"
+      className="w-[350px] mx-3 mt-8 h-full md:hidden block rounded-3xl  object-cover will-change-transform"
+      
+    />
+
            </div>
         </div>
     )
