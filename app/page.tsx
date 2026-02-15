@@ -35,7 +35,7 @@ export default function Home() {
   return (    
        <ReactLenis root className="h-full w-full  ">
          {!loaded && <Loader onComplete={() => setLoaded(true)} />}
-<TrionnCursor/>
+<TrionnCursor />
  <Hero2/>
  <About/>
     <BrandPhilosophy/>

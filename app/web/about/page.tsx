@@ -5,7 +5,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "@studio-freight/lenis";
 import Image from "next/image";
-import { div } from "framer-motion/client";
+import { TimelineDemo } from "@/components/AboutMobail";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -153,8 +153,11 @@ export default function About() {
 
 
   return (
+<div>
 
-    <div className="bg-[#0A0A0A] text-[#EDEDED] sm:block hidden ">
+
+
+   <div className="bg-[#0A0A0A] text-[#EDEDED] sm:block hidden ">
 {/* big screen */}
 
 <div 
@@ -316,5 +319,10 @@ className=" sm:block hidden sm:pt-[500px] h-full w-full  pt-28 sm:px-[84px] px-3
 
 
     </div>
+
+
+    <TimelineDemo/>
+</div>
+   
   );
 }

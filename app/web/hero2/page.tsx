@@ -43,7 +43,7 @@ useEffect(() => {
 
 
     return(
-        <div className="sm:h-screen relative mt-20 sm:mt-0  rounded-4xl pb-8 h-auto w-screen flex flex-col items-center  bg-[url('/bg.png')] bg-cover bg-center ">
+        <div className="sm:h-screen relative mt-20 sm:mt-0  rounded-4xl pb-8 h-screen w-screen flex flex-col items-center  bg-[url('/bg.png')] bg-cover bg-center ">
                     <div className="absolute right-0 top-0 bottom-0 w-full bg-gradient-to-b from-black  to-transparent z-0 pointer-events-none"></div>
 
            {/* heding text section */}

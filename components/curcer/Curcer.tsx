@@ -42,7 +42,7 @@ export default function Cursor() {
         ref={bigRingRef}
         className="pointer-events-none fixed left-0 top-0 z-[9997]
                    -translate-x-1/2 -translate-y-1/2
-                   h-16 w-16 rounded-full border-2"
+                   h-16 w-16 rounded-full border-2 "
         style={{
           borderColor: "#464cef",
           boxShadow: "0 0 22px #46a3ef",
