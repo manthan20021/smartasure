@@ -26,8 +26,6 @@ const SmartHomeExperience: React.FC = () => {
   const [musicVolume, setMusicVolume] = useState(50);
 
   const phoneRef = useRef<HTMLDivElement>(null);
-  const titleRef = useRef<HTMLHeadingElement>(null);
-  const textRef = useRef<HTMLHeadingElement>(null);
   const controls = useAnimation();
 
   useEffect(() => {
@@ -46,37 +44,8 @@ const SmartHomeExperience: React.FC = () => {
     requestAnimationFrame(raf);
     lenis.on("scroll", ScrollTrigger.update);
 
-    if (titleRef.current) {
-      gsap.fromTo(
-        titleRef.current,
-        { opacity: 0, x: -100 },
-        {
-          opacity: 1,
-          x: 0,
-          scrollTrigger: {
-            trigger: titleRef.current,
-            start: "top 80%",
-            scrub: true,
-          },
-        }
-      );
-    }
+    
 
-    if (textRef.current) {
-      gsap.fromTo(
-        textRef.current,
-        { opacity: 0, x: 100 },
-        {
-          opacity: 1,
-          x: 0,
-          scrollTrigger: {
-            trigger: textRef.current,
-            start: "top 80%",
-            scrub: true,
-          },
-        }
-      );
-    }
   }, []);
 
   const getLightColorString = () => {
@@ -104,15 +73,14 @@ const SmartHomeExperience: React.FC = () => {
           {/* LEFT CONTENT */}
           <div className="text-center lg:text-left">
             <h1
-              ref={titleRef}
+              
               className="text-[40px] sm:text-[55px] lg:text-[70px] font-medium"
             >
               YOUR HOME
             </h1>
             <h2
-              ref={textRef}
               className="text-[32px] sm:text-[45px] lg:text-[70px] font-medium"
-            >
+            > 
               PERFECTLY IN SYNC WITH YOU
             </h2>
             <p className="mt-4 text-[16px] sm:text-[20px] text-gray-300 max-w-xl mx-auto lg:mx-0">

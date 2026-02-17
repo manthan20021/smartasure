@@ -121,7 +121,7 @@ export default function Hero() {
       "
     >
       {/* LEFT CONTENT */}
-      <div className="max-w-xl text-center lg:text-left">
+      <div className="w-full  text-center lg:text-left">
         <h1 className="mt-10 lg:mt-40 text-[36px] sm:text-[48px] lg:text-[60px] font-semibold text-[#B3B3B3]">
           WHY SMARTASURE
         </h1>

@@ -82,7 +82,9 @@ export default function HowItWorks() {
   }, []);
 
   return (
-    <div className="w-full px-4 sm:px-8 lg:px-[84px] ">
+    <div>
+      {/* for big screen */}
+<div className="w-full sm:block hidden  px-2 sm:px-2 lg:px-[84px] ">
       {/* HEADING */}
       <div className="w-full">
         <h5 className="text-[72px] sm:text-[120px] lg:text-[180px] mt-20 font-medium">
@@ -141,5 +143,73 @@ export default function HowItWorks() {
         </div>
       </div>
     </div>
+
+{/* for small screen */}
+       <div className="w-full sm:hidden block  px-2 sm:px-2 lg:px-[84px] ">
+      {/* HEADING */}
+      <div className="w-full">
+        <h5 className="text-[72px] sm:text-[120px] lg:text-[180px] mt-20 font-medium">
+          OUR
+        </h5>
+        <h5
+          
+          className="text-[72px] sm:text-[120px] lg:text-[180px] mt-[-30px] sm:mt-[-50px] lg:mt-[-65px] font-medium"
+        >
+          PROCESS
+        </h5>
+      </div>
+
+      {/* CONTENT */}
+      <div className="w-full h-auto mt-20 mb-16 text-[#EDEDED]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+          <div
+            
+            className="w-full max-w-[676px] h-[260px] sm:h-[320px] lg:h-[359px] bg-gradient-to-br from-blue-700 to-[#0e0d0d] flex flex-col item-center justify-center   rounded-3xl"
+          > 
+          <h1 className="text-[30px] lg:text-[70px] font-medium bg-[#0A0A0A] ">Private Consultation </h1>
+          <p>We understand your lifestyle, space, and expecta ons. </p>
+          </div>
+
+          <div
+           
+            className="w-full max-w-[676px] h-[260px] sm:h-[320px] lg:h-[359px] bg-gradient-to-br from-red-700 to-[#0e0d0d] lg:mt-[200px] flex flex-col item-center justify-center rounded-3xl"
+          >
+             <h1 className="text-[30px] lg:text-[70px] font-medium bg-[#0A0A0A] ">Intelligent Design </h1>
+          <p>Custom automation plans crafted around how you live.</p>
+          </div>
+
+          <div
+          
+            className="w-full max-w-[676px] h-[260px] sm:h-[320px] lg:h-[359px] bg-gradient-to-br from-yellow-700 to-[#0e0d0d] lg:mt-[-200px] flex flex-col item-center justify-center rounded-3xl"
+          >
+             <h1 className="text-[30px] lg:text-[70px] font-medium bg-[#0A0A0A] ">Precision Installation</h1>
+          <p>Executed by trained professionals with absolute care.</p>
+          </div>
+
+          <div
+            
+            className="w-full max-w-[676px] h-[260px] sm:h-[320px] lg:h-[359px] bg-gradient-to-br from-green-700 to-[#000000]  flex flex-col item-center justify-center rounded-3xl"
+          >
+            <h1 className="text-[30px] lg:text-[68px] font-medium bg-[#0A0A0A] ">Seamless Integration</h1>
+          <p>Unified control through app and voice assistants.</p>
+          </div>
+
+          <div
+            
+            className="w-full max-w-[676px] h-[260px] sm:h-[320px] lg:h-[359px] bg-gradient-to-br from-orange-700 to-[#000000] lg:mt-[-200px] flex flex-col item-center justify-center rounded-3xl"
+          >
+            <h1 className="text-[30px] lg:text-[70px] font-medium bg-[#0A0A0A] "> Ongoing Support </h1>
+          <p>Because luxury deserves reliability.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    </div>
+    
+
+
+
   );
 }
