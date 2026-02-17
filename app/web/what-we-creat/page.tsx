@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { AppleCardsCarouselDemo } from "@/components/WhatWeCreat";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -48,7 +49,8 @@ export default function HorizontalTest() {
   }, []);
 
   return (
-    <section className="w-full sm:block hidden bg-[#D5D5D5]">
+    <div>
+      <section className="w-full sm:block hidden bg-[#D5D5D5]">
       <div
         ref={sectionRef}
         className="
@@ -140,6 +142,10 @@ export default function HorizontalTest() {
         </div>
       </div>
     </section>
+
+    <AppleCardsCarouselDemo/>
+    </div>
+    
     
   );
 }
